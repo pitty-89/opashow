@@ -1,4 +1,4 @@
-<?require_once("header.php");?>
+<?require_once("opashow/header.php");?>
 <div class="container">
     <div class="row">
         <h1 class="text-center"><i class="fa fa-bell"></i> Шапка opashow</h1>
@@ -205,4 +205,4 @@
         <h1 class="text-center"><i class="fa fa-bullhorn"></i> Футер opashow</h1>
     </div>
 </div>
-<?require_once("footer.php");?>
+<?require_once("opashow/footer.php");?>
