@@ -1,7 +1,7 @@
 @font-face {
     font-family: Rotonda;
-    src: url("opashow/fonts/Rotonda.eot");
-    src: local(Rotonda), url("opashow/fonts/Rotonda.ttf");
+    src: url("../fonts/Rotonda.eot");
+    src: local(Rotonda), url("../fonts/Rotonda.ttf");
     /*src: url(data:application/font-woff;charset=utf-8;) format('woff');*/
 }
 
