@@ -1,0 +1,155 @@
+@keyframes sl-hide {
+    0% { opacity: 1; }
+    99% { opacity: 0; visibility: visible; }
+    100% { visibility: hidden; }
+}
+@keyframes sl-show {
+    0% { opacity: 0; visibility: visible; z-index: 3; }
+    99% { z-index: 2; }
+    100% { opacity: 1; }
+}
+@keyframes sl-show-title {
+    0% { top: 0; opacity: 0; }
+    100% { top: 55px; opacity: 1; }
+}
+@keyframes sl-show-desc {
+    0% { left: 0; opacity: 0; }
+    100% { left: 100px; opacity: 1; }
+}
+@keyframes sl-hide-desc {
+    0% { left: 100px; opacity: 1; }
+    100% { left: 0; opacity: 0; }
+}
+@keyframes sl-hide-title {
+    0% { top: 55px; opacity: 1; }
+    100% { top: 0; opacity: 0; }
+}
+@keyframes sl-show-href {
+    0% { opacity: 0; top: 350px; }
+    70% { opacity: 0; top: 350px; }
+    100% { opacity: 1; top: 255px; }
+}
+@keyframes sl-hide-href {
+    0% { opacity: 1; top: 255px; }
+    100% { opacity: 0; top: 350px; }
+}
+@keyframes sl-show-load {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes sl-hide-load {
+    0% { opacity: 1; }
+    99% { opacity: 0; display: block; }
+    100% { display: none; }
+}
+@keyframes sl-timeline-on {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+.sl-container {
+    position: relative;
+    background: rgb(255,255,255);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: 10px solid rgb(255,255,255);
+    z-index: 0;
+    margin: 0 20px;
+}
+.sl-list { width: 100%; border-radius: 10px; overflow: hidden; }
+.sl-list ul { width: 100%; position: relative; margin: 0; padding: 0; }
+.sl-list-elem {
+    animation: .3s sl-hide linear;
+    list-style: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    visibility: hidden;
+    width: 100%;
+}
+.sl-list-elem.sl-active { visibility: visible; animation: .3s sl-show linear; position: relative; }
+.sl-img { }
+
+.sl-timeline,
+.sl-load,
+.sl-href,
+.sl-nav,
+.sl-title,
+.sl-desc,
+.sl-line { position: absolute; z-index: 2; }
+.sl-title { animation: .5s sl-hide-title linear; top: 0; opacity: 0; }
+.sl-desc,
+.sl-line { animation: .5s sl-hide-desc linear; opacity: 0; }
+.sl-active .sl-title { animation: .6s sl-show-title ease-in; top: 55px; opacity: 1; }
+.sl-active .sl-desc,
+.sl-active .sl-line { animation: .6s sl-show-desc ease-in; left: 100px; opacity: 1; }
+
+.sl-img img { width: 100%; }
+.sl-title {
+    color: rgb(255, 251, 223);
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+    left: 100px;
+}
+.sl-desc {
+    font-size: 40px;
+    line-height: 44px;
+    top: 90px;
+    left: 0;
+    color: rgb(255,255,255);
+    display: inline-block;
+}
+.sl-line {
+    width: 33%;
+    background: rgb(255,251,223);
+    height: 2px;
+    top: 145px;
+}
+.sl-href { animation: .7 sl-hide-href linear; left: 100px; top: 350px; }
+.sl-active .sl-href { animation: 1.3s sl-show-href ease-in; top: 255px; }
+.sl-href a {
+    color: rgb(255,251,223);
+    padding: 0 35px;
+    font-size: 18px;
+    background: linear-gradient(to top, rgb(242, 86, 0), rgb(248, 139, 0));
+    box-shadow: inset 0 0 10px rgb(222, 66, 0);
+    border: 3px solid #c1e6eb;
+    border-radius: 21px;
+    line-height: 42px;
+    display: block;
+}
+.sl-nav { top: 44%; font-size: 24px; }
+.sl-nav a {
+    color: #fff;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    background: linear-gradient(to top, rgb(242, 86, 0), rgb(248, 139, 0));
+    box-shadow: inset 0 0 10px rgb(222, 66, 0);
+    display: block;
+    text-align: center;
+}
+.sl-href a:hover,
+.sl-nav a:hover {
+    text-decoration: none;
+    background: linear-gradient(to top, rgb(138, 166, 0), rgb(182, 202, 0));
+    box-shadow: inset 0 0 10px rgb(118, 146, 0);
+}
+.sl-nav-left { left: -33px; }
+.sl-nav-left a { padding: 10px 16px 10px 12px; }
+.sl-nav-right { right: -33px; }
+.sl-nav-right a { padding: 10px 12px 10px 16px; }
+.sl-load { top: 50%; left: 49%; opacity: 0; display: none; width: 50px; height: 50px; animation: .3 sl-hide-load linear; }
+.sl-load img { width: 100%; }
+.sl-load.sl-load-active {
+    display: block;
+    opacity: 1;
+    background: rgba(0,0,0,.7);
+    border-radius: 50%;
+    padding: 10px;
+    animation: 2s sl-show-load linear;
+}
+.sl-timeline { width: 100%; top: 0; left: 0; visibility: hidden; }
+.sl-timeline .progress-bar { width: 0%; }
+.sl-timeline.active.start-bar .progress-bar { animation: 5s sl-timeline-on linear; width: 100%; }
