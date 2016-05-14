@@ -16,7 +16,7 @@ $(document).ready(function(){
             timeOn : "start-bar",
             delay : 5000
         }),
-        autoload = false,
+        autoload = true,
         a = true,
         time = '',
         $slider = $(sl.container),
