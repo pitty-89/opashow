@@ -87,7 +87,7 @@
 
 .sl-img img { width: 100%; }
 .sl-title {
-    color: rgb(255, 251, 223);
+    color: rgb(255, 20, 20);
     font-size: 20px;
     line-height: 24px;
     font-weight: 600;
@@ -98,7 +98,7 @@
     line-height: 44px;
     top: 90px;
     left: 0;
-    color: rgb(255,255,255);
+    color: rgb(255,20,20);
     display: inline-block;
 }
 .sl-line {
