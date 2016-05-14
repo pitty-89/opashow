@@ -1,0 +1,31 @@
+@font-face {
+    font-family: Rotonda;
+    src: url("/opashow/fonts/Rotonda.eot");
+    src: local(Rotonda), url("/opashow/fonts/Rotonda.ttf");
+    /*src: url(data:application/font-woff;charset=utf-8;) format('woff');*/
+}
+
+body {
+    font-family: Rotonda, Arial, Sans-serif;
+    background: transparent url("../img/bgd.jpg") repeat scroll center top;
+}
+@keyframes move-on-hover {
+    0% { width: 50%; top: 20%; left: 26%; }
+    20% { width: 32%; top: 29%; left: 35%; }
+    80% { width: 60%; top: 15%; left: 21%; }
+    100% { width: 50%; top: 20%; left: 26%; }
+}
+.img img { width: 100%; }
+.item-hover { margin: 0 0 10px 0; }
+.item-hover a { color: #333; display: block; }
+.item-hover a h3 {  }
+.item-hover a p {  }
+.item-hover a .img { position: relative; }
+.item-hover a .img img.abs {
+    position: absolute;
+    width: 50%;
+    left: 26%;
+    top: 20%;
+    z-index: 1;
+}
+.item-hover a:hover .img img.abs { animation: .3s move-on-hover ease-in; }
