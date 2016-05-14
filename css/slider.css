@@ -137,9 +137,9 @@
     box-shadow: inset 0 0 10px rgb(118, 146, 0);
 }
 .sl-nav-left { left: 15px; }
-.sl-nav-left a { padding: 8px 16px 5px 12px; }
+.sl-nav-left a { padding: 8px 16px 3px 12px; }
 .sl-nav-right { right: 15px; }
-.sl-nav-right a { padding: 10px 12px 10px 16px; }
+.sl-nav-right a { padding: 8px 12px 3px 16px; }
 .sl-load { top: 50%; left: 49%; opacity: 0; display: none; width: 50px; height: 50px; animation: .3 sl-hide-load linear; }
 .sl-load img { width: 100%; }
 .sl-load.sl-load-active {
